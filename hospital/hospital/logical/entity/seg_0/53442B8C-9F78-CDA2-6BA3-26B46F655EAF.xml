@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="53442B8C-9F78-CDA2-6BA3-26B46F655EAF" name="TB_CONSULTA">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:02:50 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_medico" id="4B82AA63-F72A-A23E-83C2-04FF36F86A68">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:05:17 UTC</createdTime>
+<generatorID>33C2E810-1598-8CAA-280F-530505A317E1</generatorID>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<referedAttribute>CF545F45-D108-38E4-E5E9-A462DDE7BF70</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_paciente" id="38581D07-32C8-2957-4E00-C853FB59F3ED">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:04:58 UTC</createdTime>
+<generatorID>DEED7CCF-127A-878B-FB3E-8949693E5FAE</generatorID>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<referedAttribute>C30E32B4-3FA2-873F-9319-5CD1263AAE4E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_consulta" id="C1C6F56A-1BA8-8877-552D-FC2B9BDECAE3">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:03:45 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_hora_consulta" id="DE884DE9-2486-ED70-3DAD-8D64BDB7AB1F">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:04:15 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="valor_consulta" id="6C4E0DFC-F9E7-3FDF-D0AB-A892B47E0EEE">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:04:32 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="06D4325B-AA0D-6CBC-C3BE-DD552CA72F3E" name="TB_CONSULTA PK">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:03:56 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C1C6F56A-1BA8-8877-552D-FC2B9BDECAE3</attributeRef>
+<attributeRef>4B82AA63-F72A-A23E-83C2-04FF36F86A68</attributeRef>
+<attributeRef>38581D07-32C8-2957-4E00-C853FB59F3ED</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

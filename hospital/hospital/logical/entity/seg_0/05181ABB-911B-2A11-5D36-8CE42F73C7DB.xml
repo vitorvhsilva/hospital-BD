@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="05181ABB-911B-2A11-5D36-8CE42F73C7DB" name="TB_CONVENIO">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-04-29 18:19:49 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_paciente" id="B3D5AD54-308E-BD32-0685-A0B9CD1A4543">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:03:08 UTC</createdTime>
+<generatorID>D35DD5F1-F359-1C93-1305-0DB9FBA6391B</generatorID>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<referedAttribute>C30E32B4-3FA2-873F-9319-5CD1263AAE4E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_convenio" id="8A1E8E8F-7C75-22AB-35B2-4865C87B13A9">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-04-29 18:20:13 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome_convenio" id="532AAA65-9EFF-4457-7AFF-8524593FDF80">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-04-29 18:20:13 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cpnj_convenio" id="47DF976D-43CE-0F36-75FB-A06F3031A756">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-04-29 18:20:13 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>14</dataTypePrecision>
+<ownDataTypeParameters>,14,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tempo_carencia_convenio" id="9BFAF085-BCB7-7E86-376A-E139881B9C37">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-04-29 18:20:14 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4C4F7263-39D8-4ED8-A30E-C63C5320E454" name="TB_CONVENIO PK">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:03:17 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B3D5AD54-308E-BD32-0685-A0B9CD1A4543</attributeRef>
+<attributeRef>8A1E8E8F-7C75-22AB-35B2-4865C87B13A9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

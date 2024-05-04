@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1A9D5366-3AED-6B63-2881-E2A0F7BEA556" name="TB_ENDERECO_PACIENTE">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 03:58:16 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_paciente" id="A71CD8EE-EC0A-3FA6-15BC-C2B0225F48D2">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 03:58:29 UTC</createdTime>
+<generatorID>529DFBAE-8115-DFC2-2482-1385076D1B66</generatorID>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<referedAttribute>C30E32B4-3FA2-873F-9319-5CD1263AAE4E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_endereco" id="98E5320D-1C39-A165-1987-093B92800AE2">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 03:58:31 UTC</createdTime>
+<generatorID>9E630B95-BE05-543D-0789-D90C4970BFAC</generatorID>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<referedAttribute>150BFD5E-C4F2-234B-76DD-33CF363C475A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1CF03885-72A8-6DD5-9048-9EF3B9D06AAC" name="TB_ENDERECO_PACIENTE PK">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 03:58:31 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>98E5320D-1C39-A165-1987-093B92800AE2</attributeRef>
+<attributeRef>A71CD8EE-EC0A-3FA6-15BC-C2B0225F48D2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

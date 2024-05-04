@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="160B93C4-3443-FCF5-2B29-12842E9C4702" name="TB_RECEITA">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:05:58 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_medico" id="191A2C2F-33DE-DB89-2B3B-A70EF4E7D3E9">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:08:18 UTC</createdTime>
+<generatorID>3F83C50D-378B-229E-5E1E-89D1B54C7E3D</generatorID>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<referedAttribute>4B82AA63-F72A-A23E-83C2-04FF36F86A68</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_receita" id="B6A46A18-D950-6402-F814-366F72EFA53E">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:06:18 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_paciente" id="1CCB2F3A-65A3-7B13-6540-22BEB2E1EB51">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:08:32 UTC</createdTime>
+<generatorID>3F83C50D-378B-229E-5E1E-89D1B54C7E3D</generatorID>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<referedAttribute>38581D07-32C8-2957-4E00-C853FB59F3ED</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_consulta" id="68AED8F3-77EF-2600-A522-1921C35F87E5">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:08:18 UTC</createdTime>
+<generatorID>3F83C50D-378B-229E-5E1E-89D1B54C7E3D</generatorID>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<referedAttribute>C1C6F56A-1BA8-8877-552D-FC2B9BDECAE3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="medicamento_receita" id="A333380C-E88A-8978-2D59-E9CFDD492DB9">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:06:32 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="qtd_medicamente_receita" id="B2E27D95-D3AD-8ECE-F12B-FEE799BC272F">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:06:44 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="instrucao_uso_receita" id="D5839E56-CBDE-4F5D-488B-09E820290325">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:07:37 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="41287E13-709A-63DD-75AA-B2A1D9CD80DE" name="TB_RECEITA PK">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-01 04:08:07 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B6A46A18-D950-6402-F814-366F72EFA53E</attributeRef>
+<attributeRef>191A2C2F-33DE-DB89-2B3B-A70EF4E7D3E9</attributeRef>
+<attributeRef>1CCB2F3A-65A3-7B13-6540-22BEB2E1EB51</attributeRef>
+<attributeRef>68AED8F3-77EF-2600-A522-1921C35F87E5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
