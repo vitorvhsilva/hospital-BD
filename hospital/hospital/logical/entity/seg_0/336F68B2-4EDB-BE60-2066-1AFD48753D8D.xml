@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="336F68B2-4EDB-BE60-2066-1AFD48753D8D" name="TB_PLANTAO">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-08 14:54:11 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_plantao" id="0D3C52A3-4F77-73F9-83FE-8088DC7F3EFE">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-08 15:06:33 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_internacao" id="970B6B07-B091-526C-38C0-21E918D4C30B">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-08 14:54:21 UTC</createdTime>
+<generatorID>79E1599A-D396-A043-4E87-891CEEBC8EC2</generatorID>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<referedAttribute>F205C5E0-9946-1B47-0A2C-E63669EA8FD5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_paciente" id="7B89BF55-6109-F910-FDAD-15F16BA31A95">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-08 14:54:21 UTC</createdTime>
+<generatorID>79E1599A-D396-A043-4E87-891CEEBC8EC2</generatorID>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<referedAttribute>4E121144-60C9-465A-608C-5243B6C53E56</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_medico" id="1500348C-851A-A10B-27C6-60750783D6B4">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-08 14:54:21 UTC</createdTime>
+<generatorID>79E1599A-D396-A043-4E87-891CEEBC8EC2</generatorID>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<referedAttribute>D9511C9F-AA8B-903E-BC3F-3852C8FF839E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_enfermeiro" id="5788283E-DFF5-FCBF-E666-716B5EA58010">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-08 14:57:08 UTC</createdTime>
+<generatorID>428FAF76-D674-9702-A07C-663FF82C8E6E</generatorID>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<referedAttribute>686B4E63-2795-EF32-B202-3AB7B113C9B6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_hora_plantao" id="B7390C1A-4538-A14D-01B9-C953A5C94670">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-08 15:06:51 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="011890B1-21FA-00A5-4130-8BA2D96A6F79" name="TB_PLANTAO PK">
+<createdBy>vito silva</createdBy>
+<createdTime>2024-05-08 15:06:29 UTC</createdTime>
+<ownerDesignName>hospital</ownerDesignName>
+<engineerTo>
+<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>970B6B07-B091-526C-38C0-21E918D4C30B</attributeRef>
+<attributeRef>7B89BF55-6109-F910-FDAD-15F16BA31A95</attributeRef>
+<attributeRef>1500348C-851A-A10B-27C6-60750783D6B4</attributeRef>
+<attributeRef>5788283E-DFF5-FCBF-E666-716B5EA58010</attributeRef>
+<attributeRef>0D3C52A3-4F77-73F9-83FE-8088DC7F3EFE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="871CB038-07E4-A2EA-81FB-E8A1A6D5B897" name="TB_ESPECIALIDADE">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="66B01D50-3B42-89AE-0B88-9001590F47AD" name="TB_QUARTO">
 <createdBy>vito silva</createdBy>
-<createdTime>2024-04-29 18:01:13 UTC</createdTime>
+<createdTime>2024-05-08 14:59:44 UTC</createdTime>
 <ownerDesignName>hospital</ownerDesignName>
 <engineerTo>
 <item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_especialidade" id="A9AECB83-9629-4C77-8DC2-7C7D3EC799C5">
+<Attribute name="id_quarto" id="1CF3D1E8-8568-03B0-1DA3-9FFA2799DC58">
 <createdBy>vito silva</createdBy>
-<createdTime>2024-04-29 18:01:19 UTC</createdTime>
+<createdTime>2024-05-08 15:02:38 UTC</createdTime>
 <ownerDesignName>hospital</ownerDesignName>
 <engineerTo>
 <item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
@@ -27,23 +27,23 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_medico" id="4D76F4D7-0421-F473-EEF5-099A5F376E27">
+<Attribute name="id_tipo_quarto" id="A4BE043C-CF8F-67D5-E91B-450C83F23E0F">
 <createdBy>vito silva</createdBy>
-<createdTime>2024-05-08 14:06:30 UTC</createdTime>
-<generatorID>9D067CAF-49B3-B2F8-D697-34D886417B83</generatorID>
+<createdTime>2024-05-08 15:01:04 UTC</createdTime>
+<generatorID>F882A0D6-5EA1-24BB-DA42-C763534CF2BC</generatorID>
 <ownerDesignName>hospital</ownerDesignName>
 <engineerTo>
 <item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
 </engineerTo>
-<referedAttribute>CF545F45-D108-38E4-E5E9-A462DDE7BF70</referedAttribute>
+<referedAttribute>CD20D9FC-D11E-AC68-232E-B087A5D30CFE</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nome_especialidade" id="D50340B1-B8A7-267F-53E1-E1B96CA8495D">
+<Attribute name="numero_quarto" id="83DECDC3-8095-9D3E-F59A-6AFA7860C520">
 <createdBy>vito silva</createdBy>
-<createdTime>2024-04-29 18:01:31 UTC</createdTime>
+<createdTime>2024-05-08 15:02:49 UTC</createdTime>
 <ownerDesignName>hospital</ownerDesignName>
 <engineerTo>
 <item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
@@ -51,23 +51,22 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="FF2933C9-60EF-D322-E29F-E05AF8F740FB" name="TB_ESPECIALIDADE PK">
+<identifier id="3CD5CB7D-F315-625E-BC77-0D115BD05F4F" name="TB_QUARTO PK">
 <createdBy>vito silva</createdBy>
-<createdTime>2024-04-29 18:01:56 UTC</createdTime>
+<createdTime>2024-05-08 15:02:23 UTC</createdTime>
 <ownerDesignName>hospital</ownerDesignName>
 <engineerTo>
 <item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>A9AECB83-9629-4C77-8DC2-7C7D3EC799C5</attributeRef>
-<attributeRef>4D76F4D7-0421-F473-EEF5-099A5F376E27</attributeRef>
+<attributeRef>A4BE043C-CF8F-67D5-E91B-450C83F23E0F</attributeRef>
+<attributeRef>1CF3D1E8-8568-03B0-1DA3-9FFA2799DC58</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

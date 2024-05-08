@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="871CB038-07E4-A2EA-81FB-E8A1A6D5B897" name="TB_ESPECIALIDADE">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7014372E-E0A0-00F7-86EC-445CA37F3732" name="TB_TIPO_MEDICO">
 <createdBy>vito silva</createdBy>
-<createdTime>2024-04-29 18:01:13 UTC</createdTime>
+<createdTime>2024-05-08 14:03:47 UTC</createdTime>
 <ownerDesignName>hospital</ownerDesignName>
 <engineerTo>
 <item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
@@ -15,22 +15,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_especialidade" id="A9AECB83-9629-4C77-8DC2-7C7D3EC799C5">
+<Attribute name="id_medico" id="1419EF35-8E2D-1C04-38B8-CC4A7AFE71F9">
 <createdBy>vito silva</createdBy>
-<createdTime>2024-04-29 18:01:19 UTC</createdTime>
-<ownerDesignName>hospital</ownerDesignName>
-<engineerTo>
-<item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_medico" id="4D76F4D7-0421-F473-EEF5-099A5F376E27">
-<createdBy>vito silva</createdBy>
-<createdTime>2024-05-08 14:06:30 UTC</createdTime>
-<generatorID>9D067CAF-49B3-B2F8-D697-34D886417B83</generatorID>
+<createdTime>2024-05-08 14:04:08 UTC</createdTime>
+<generatorID>3E8AF5E5-B339-1708-CAF0-42C5440BED55</generatorID>
 <ownerDesignName>hospital</ownerDesignName>
 <engineerTo>
 <item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
@@ -41,33 +29,33 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nome_especialidade" id="D50340B1-B8A7-267F-53E1-E1B96CA8495D">
+<Attribute name="id_tipo" id="55EF4145-D064-9ECD-2735-A975CE509EFA">
 <createdBy>vito silva</createdBy>
-<createdTime>2024-04-29 18:01:31 UTC</createdTime>
+<createdTime>2024-05-08 14:04:12 UTC</createdTime>
+<generatorID>86BB885E-999B-6FA5-1BDE-0A131FB9BAAB</generatorID>
 <ownerDesignName>hospital</ownerDesignName>
 <engineerTo>
 <item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
+<referedAttribute>48B84D00-E452-B31F-A281-5362D674903A</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="FF2933C9-60EF-D322-E29F-E05AF8F740FB" name="TB_ESPECIALIDADE PK">
+<identifier id="335F79DA-AA26-015B-55FF-FECC39DE1D78" name="TB_TIPO_MEDICO PK">
 <createdBy>vito silva</createdBy>
-<createdTime>2024-04-29 18:01:56 UTC</createdTime>
+<createdTime>2024-05-08 14:04:20 UTC</createdTime>
 <ownerDesignName>hospital</ownerDesignName>
 <engineerTo>
 <item key="5015A481-F4A5-8CAE-68A5-118577B63458" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>A9AECB83-9629-4C77-8DC2-7C7D3EC799C5</attributeRef>
-<attributeRef>4D76F4D7-0421-F473-EEF5-099A5F376E27</attributeRef>
+<attributeRef>1419EF35-8E2D-1C04-38B8-CC4A7AFE71F9</attributeRef>
+<attributeRef>55EF4145-D064-9ECD-2735-A975CE509EFA</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
