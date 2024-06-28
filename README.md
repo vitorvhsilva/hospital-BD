@@ -64,3 +64,147 @@ Crie um script para atualizar ao menos dois médicos como inativos e os demais e
 <br>
 <img align='center' src='diagramaparte3.png'/>
 <br>
+
+<h2>🎲Parte 5 - A Ordem do Alterar </h2>
+<p>1 - Todos os dados e o valor médio das consultas do ano de 2020 e das que foram feitas sob convênio.</p>
+
+```
+SELECT *, AVG(valor_consulta) OVER () AS valor_medio_consulta FROM TB_CONSULTA WHERE YEAR(data_hora_consulta) = 2020;
+```
+
+<p>2 - Todos os dados das internações que tiveram data de alta maior que a data prevista para a alta.</p>
+
+```
+SELECT * FROM TB_INTERNACAO WHERE data_saida > data_prev_alta;
+```
+
+<p>3 - Receituário completo da primeira consulta registrada com receituário associado.</p>
+
+```
+SELECT 
+  r.*
+FROM 
+  TB_RECEITA r
+  INNER JOIN TB_CONSULTA c ON r.id_consulta = c.id_consulta
+ORDER BY 
+  c.data_hora_consulta ASC
+LIMIT 1;
+```
+
+<p>4 - Todos os dados da consulta de maior valor e também da de menor valor (ambas as consultas não foram realizadas sob convênio).</p>
+
+```
+SELECT 
+  c.*
+FROM 
+  TB_CONSULTA c
+WHERE 
+  c.valor_consulta = (SELECT MAX(valor_consulta) FROM TB_CONSULTA WHERE id_convenio IS NULL)
+  OR c.valor_consulta = (SELECT MIN(valor_consulta) FROM TB_CONSULTA WHERE id_convenio IS NULL);
+```
+
+<p>5 - Todos os dados das internações em seus respectivos quartos, calculando o total da internação a partir do valor de diária do quarto e o número de dias entre a entrada e a alta.</p>
+
+```
+SELECT 
+  i.*,
+  tq.valor_diaria_tipo_quarto * DATEDIFF(i.data_saida, i.data_entrada) AS total_internacao
+FROM 
+  TB_INTERNACAO i
+  INNER JOIN TB_QUARTO q ON i.id_quarto = q.id_quarto
+  INNER JOIN TB_TIPO_QUARTO tq ON q.id_tipo_quarto = tq.id_tipo_quarto;
+```
+
+<p>6 - Data, procedimento e número de quarto de internações em quartos do tipo “apartamento”.</p>
+
+```
+SELECT 
+  i.data_entrada,
+  i.data_saida,
+  q.numero_quarto
+FROM 
+  TB_INTERNACAO i
+  INNER JOIN TB_QUARTO q ON i.id_quarto = q.id_quarto
+  INNER JOIN TB_TIPO_QUARTO tq ON q.id_tipo_quarto = tq.id_tipo_quarto
+WHERE 
+  tq.descricao_tipo_quarto = 'Apartamento';
+```
+
+<p>7 - Nome do paciente, data da consulta e especialidade de todas as consultas em que os pacientes eram menores de 18 anos na data da consulta e cuja especialidade não seja “pediatria”, ordenando por data de realização da consulta.</p>
+
+```
+SELECT 
+  p.nome_paciente,
+  c.data_hora_consulta,
+  me.descricao_especialidade
+FROM 
+  TB_CONSULTA c
+  INNER JOIN TB_PACIENTE p ON c.id_paciente = p.id_paciente
+  INNER JOIN TB_MEDICO m ON c.id_medico = m.id_medico
+  INNER JOIN TB_MEDICO_ESPECIALIDADE me ON m.id_medico = me.id_medico
+WHERE 
+  TIMESTAMPDIFF(YEAR, p.data_nascimento, c.data_hora_consulta) < 18
+  AND me.descricao_especialidade!= 'Pediatria'
+ORDER BY 
+  c.data_hora_consulta ASC;
+```
+
+<p>8 - Nome do paciente, nome do médico, data da internação e procedimentos das internações realizadas por médicos da especialidade “gastroenterologia”, que tenham acontecido em “enfermaria”.</p>
+
+```
+SELECT 
+  p.nome_paciente,
+  m.nome_medico,
+  i.data_entrada,
+  i.data_saida
+FROM 
+  TB_INTERNACAO i
+  INNER JOIN TB_PACIENTE p ON i.id_paciente = p.id_paciente
+  INNER JOIN TB_MEDICO m ON i.id_medico = m.id_medico
+  INNER JOIN TB_MEDICO_ESPECIALIDADE me ON m.id_medico = me.id_medico
+  INNER JOIN TB_QUARTO q ON i.id_quarto = q.id_quarto
+WHERE 
+  me.descricao_especialidade = 'Gastroenterologia'
+  AND q.id_tipo_quarto = (SELECT id_tipo_quarto FROM TB_TIPO_QUARTO WHERE descricao_tipo_quarto = "Enfermaria"
+```
+
+<p>9 - Os nomes dos médicos, seus CRMs e a quantidade de consultas que cada um realizou.</p>
+
+```
+SELECT 
+  m.nome_medico,
+  m.cpf_medico AS CRM,
+  COUNT(c.id_consulta) AS quantidade_consultas
+FROM 
+  TB_MEDICO m
+  LEFT JOIN TB_CONSULTA c ON m.id_medico = c.id_medico
+GROUP BY 
+  m.id_medico;
+```
+
+<p>10 - Todos os médicos que tenham "Gabriel" no nome. </p>
+
+```
+SELECT 
+  m.nome_medico,
+  m.cpf_medico AS CRM
+FROM 
+  TB_MEDICO m
+WHERE 
+  m.nome_medico LIKE '%Gabriel%';
+```
+
+<p>11 - Os nomes, CREs e número de internações de enfermeiros que participaram de mais de uma internação.</p>
+
+```
+SELECT 
+  e.nome_enfermeiro,
+  COUNT(p.id_plantao) AS quantidade_internacoes
+FROM 
+  TB_ENFERMEIRO e
+  INNER JOIN TB_PLANTAO p ON e.id_enfermeiro = p.id_enfermeiro
+GROUP BY 
+  e.id_enfermeiro
+HAVING 
+  COUNT(p.id_plantao) > 1;
+```
