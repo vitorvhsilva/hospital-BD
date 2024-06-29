@@ -1,5 +1,15 @@
 <h1 align='center'>O Hospital Fundamental</h1>
 
+<h2>Feito por</h2>
+<ul>
+  <li><a href="https://github.com/selingindev">@selingindev</a></li>
+  <li><a href="https://github.com/LuizHms55">@LuizHms55</a></li>
+  <li><a href="https://github.com/APBielzinx">@APBielzinx</a></li>
+  <li><a href="https://github.com/Ruuhbcs">@Ruuhbcs</a></li>
+  <li><a href="https://github.com/AvgvstaDev">@AvgvstaDev</a></li>
+  <li><a href="https://github.com/vitorvhsilva">@vitorvhsilva</a></li>
+</ul>
+
 <h2>🎲Parte 1 - DER</h2>
 
 <p>Analise a seguinte descrição e extraia dela os requisitos para o banco de dados:
